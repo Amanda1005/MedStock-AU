@@ -31,8 +31,6 @@ The system integrates multiple AI paradigms:
 ![MedStock-AU System Architecture](reports/images/system_architecture.png)
 
 ---
-
-```
 ## Key Features
 
 | Feature | Technology | Description |
@@ -70,7 +68,7 @@ Paracetamol, Ibuprofen, Amoxicillin, Metformin, Atorvastatin, Omeprazole, Salbut
 ---
 
 ## Project Structure
-
+```
 MedStock-AU/
 ├── data/
 │   ├── raw/                          # Synthetic raw demand data
