@@ -31,6 +31,7 @@ The system integrates multiple AI paradigms:
 ![MedStock-AU System Architecture](reports/images/system_architecture.png)
 
 ---
+```
 
 ## Key Features
 
@@ -101,6 +102,7 @@ MedStock-AU/
 ├── requirements.txt
 └── README.md
 
+```
 ---
 
 ## Model Performance
