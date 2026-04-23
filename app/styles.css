@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.stApp {
+    background-color: #FAF7F4;
+}
+
+[data-testid="stSidebar"] {
+    background-color: #F5EDE8 !important;
+    border-right: 0.5px solid #E8DDD5;
+}
+
+[data-testid="stMetric"] {
+    background: #FFFFFF;
+    border: 0.5px solid #EDE5E0;
+    border-radius: 12px;
+    padding: 16px !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #B89080 !important;
+    font-size: 11px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+[data-testid="stMetricValue"] {
+    color: #6B4440 !important;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+}
+
+/* Global buttons — rose pink */
+.stButton > button {
+    background-color: #C47B70 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 8px 20px !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13px !important;
+}
+
+.stButton > button:hover {
+    background-color: #B36B60 !important;
+}
+
+/* Quick chip buttons — override global button style */
+section[data-testid="stHorizontalBlock"] .stButton > button {
+    background-color: #FFFFFF !important;
+    color: #8B6B60 !important;
+    border: 0.5px solid #EDE5E0 !important;
+    border-radius: 20px !important;
+    font-size: 11px !important;
+    padding: 4px 14px !important;
+    height: 30px !important;
+    min-height: 0 !important;
+    line-height: 1.2 !important;
+    font-weight: 400 !important;
+}
+
+section[data-testid="stHorizontalBlock"] .stButton > button:hover {
+    background-color: #F5EDE8 !important;
+    color: #6B4440 !important;
+    border-color: #D4A099 !important;
+}
+
+.stSelectbox > div > div {
+    background: #FFFFFF !important;
+    border: 0.5px solid #EDE5E0 !important;
+    border-radius: 10px !important;
+    color: #6B4440 !important;
+}
+
+.stTextInput > div > div > input {
+    background: #FFFFFF !important;
+    border: 0.5px solid #EDE5E0 !important;
+    border-radius: 20px !important;
+    color: #6B4440 !important;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+h1, h2, h3 {
+    color: #6B4440 !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+hr {
+    border-color: #EDE5E0 !important;
+}
+
+.stSuccess {
+    background: #EAF3DE !important;
+    color: #3B6D11 !important;
+    border-radius: 10px !important;
+}
+
+.stWarning {
+    background: #FAEEDA !important;
+    color: #854F0B !important;
+    border-radius: 10px !important;
+}
+
+.stError {
+    background: #FCEBEB !important;
+    color: #A32D2D !important;
+    border-radius: 10px !important;
+}
+
+/* Chat messages */
+[data-testid="stChatMessage"] {
+    background: #FFFFFF !important;
+    border: 0.5px solid #EDE5E0 !important;
+    border-radius: 14px !important;
+    padding: 12px 16px !important;
+    margin-bottom: 8px !important;
+}
+
+/* Chat input box */
+[data-testid="stChatInput"] {
+    border-radius: 20px !important;
+    border: 0.5px solid #EDE5E0 !important;
+    background: #FFFFFF !important;
+}
+
+[data-testid="stChatInput"] textarea {
+    font-family: 'DM Sans', sans-serif !important;
+    color: #6B4440 !important;
+    font-size: 13px !important;
+}
+
+/* Avatar circle */
+[data-testid="stChatMessageAvatar"] {
+    background: #C47B70 !important;
+    color: white !important;
+    border-radius: 50% !important;
+}
