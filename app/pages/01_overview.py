@@ -12,7 +12,7 @@ with open(css_path) as f:
 
 st.sidebar.markdown("""
 <div style="padding: 8px 0 20px 0; border-bottom: 0.5px solid #E8DDD5; margin-bottom: 8px;">
-    <div style="font-size: 18px; font-weight: 500; color: #8B5E52;">💊 MedStock AU</div>
+    <div style="font-size: 18px; font-weight: 500; color: #8B5E52;">MedStock AU</div>
     <div style="font-size: 11px; color: #B89080; margin-top: 2px;">Sydney Pharmacy Network</div>
 </div>
 """, unsafe_allow_html=True)
@@ -30,7 +30,7 @@ st.markdown("""
     <div style="font-size: 13px; color: #C4A090; margin-bottom: 4px;">
         AI-Powered Pharmaceutical Demand Forecasting & Inventory Optimisation
     </div>
-    <h1 style="font-size: 28px;">📊 Network Overview</h1>
+    <h1 style="font-size: 28px;"> Network Overview</h1>
     <p style="color: #B89080; font-size: 13px;">
         Sydney pharmacy network · 8 locations · 15 medications · Real-time AI monitoring
     </p>

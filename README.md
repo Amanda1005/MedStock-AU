@@ -1,4 +1,4 @@
-# MedStock-AU 💊
+# MedStock-AU
 
 **AI-Powered Pharmaceutical Demand Forecasting and Inventory Optimisation System for Australian Hospital Pharmacies**
 
@@ -84,11 +84,11 @@ MedStock-AU/
 │   ├── main.py                       # Streamlit entry point
 │   ├── styles.css                    # Custom UI styling
 │   └── pages/
-│       ├── 01_overview.py            # Network dashboard
-│       ├── 02_medication_search.py   # Drug query & forecast
-│       ├── 03_anomaly_alerts.py      # Anomaly detection view
-│       ├── 04_reorder_report.py      # LLM report generation
-│       └── 05_chatbot.py             # Conversational interface
+│       ├── 01_Overview.py            # Network dashboard
+│       ├── 02_Medication_search.py   # Drug query & forecast
+│       ├── 03_Anomaly_alerts.py      # Anomaly detection view
+│       ├── 04_Reorder_report.py      # LLM report generation
+│       └── 05_MedStock_Assistant.py  # Conversational interface
 ├── api/
 │   └── main.py                       # FastAPI backend
 ├── src/
@@ -148,7 +148,7 @@ The PPO agent reduces cumulative stockout by ~10,000 units over 3 years compared
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/MedStock-AU.git
+git clone https://github.com/Amanda1005/MedStock-AU.git
 cd MedStock-AU
 
 # Install dependencies

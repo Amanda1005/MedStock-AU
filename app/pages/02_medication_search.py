@@ -13,7 +13,7 @@ with open(css_path) as f:
 
 st.sidebar.markdown("""
 <div style="padding: 8px 0 20px 0; border-bottom: 0.5px solid #E8DDD5; margin-bottom: 8px;">
-    <div style="font-size: 18px; font-weight: 500; color: #8B5E52;">💊 MedStock AU</div>
+    <div style="font-size: 18px; font-weight: 500; color: #8B5E52;">MedStock AU</div>
     <div style="font-size: 11px; color: #B89080; margin-top: 2px;">Sydney Pharmacy Network</div>
 </div>
 """, unsafe_allow_html=True)
@@ -28,7 +28,7 @@ df = load_data()
 
 st.markdown("""
 <div style="padding: 8px 0 20px 0;">
-    <h1 style="font-size: 24px;">🔍 Medication Search & Forecast</h1>
+    <h1 style="font-size: 24px;">Medication Search & Forecast</h1>
     <p style="color: #B89080; font-size: 13px;">Query demand history and forecast for any medication across Sydney locations</p>
 </div>
 """, unsafe_allow_html=True)
@@ -183,44 +183,3 @@ with col_right:
     fig3.update_xaxes(showgrid=False)
     fig3.update_yaxes(showgrid=True, gridcolor='#EDE5E0')
     st.plotly_chart(fig3, use_container_width=True)
-
-st.markdown("---")
-st.markdown("#### 7-Day Simple Forecast")
-
-if selected_loc and selected_med:
-    subset = df[
-        (df['location'] == selected_loc) &
-        (df['medication'] == selected_med)
-    ].sort_values('date').tail(30)
-
-    if not subset.empty:
-        avg   = subset['demand_units'].mean()
-        trend = subset['demand_units'].iloc[-7:].mean() - subset['demand_units'].iloc[:7].mean()
-        fc    = [max(0, int(avg + trend * 0.1 + np.random.normal(0, avg * 0.05)))
-                 for _ in range(7)]
-
-        from datetime import datetime, timedelta
-        today     = df['date'].max()
-        fc_dates  = [today + timedelta(days=i+1) for i in range(7)]
-        fc_df     = pd.DataFrame({'Date': fc_dates, 'Forecasted Demand': fc})
-        fc_df['Date'] = fc_df['Date'].dt.strftime('%b %d')
-
-        fig_fc = px.bar(
-            fc_df,
-            x = 'Date',
-            y = 'Forecasted Demand',
-            color_discrete_sequence = ['#D4A099'],
-        )
-        fig_fc.update_layout(
-            plot_bgcolor  = '#FFFFFF',
-            paper_bgcolor = '#FFFFFF',
-            font_family   = 'DM Sans',
-            font_color    = '#6B4440',
-            margin        = dict(l=0, r=0, t=10, b=0),
-            height        = 220,
-        )
-        fig_fc.update_xaxes(showgrid=False)
-        fig_fc.update_yaxes(showgrid=True, gridcolor='#EDE5E0')
-        st.plotly_chart(fig_fc, use_container_width=True)
-else:
-    st.info("Select a specific location to see the 7-day forecast.")

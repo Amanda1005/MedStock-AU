@@ -19,7 +19,7 @@ with open(css_path) as f:
 
 st.sidebar.markdown("""
 <div style="padding: 8px 0 20px 0; border-bottom: 0.5px solid #E8DDD5; margin-bottom: 8px;">
-    <div style="font-size: 18px; font-weight: 500; color: #8B5E52;">💊 MedStock AU</div>
+    <div style="font-size: 18px; font-weight: 500; color: #8B5E52;">MedStock AU</div>
     <div style="font-size: 11px; color: #B89080; margin-top: 2px;">Sydney Pharmacy Network</div>
 </div>
 """, unsafe_allow_html=True)
@@ -34,7 +34,7 @@ df = load_data()
 
 st.markdown("""
 <div style="padding: 8px 0 20px 0;">
-    <h1 style="font-size: 24px;">📋 Reorder Report</h1>
+    <h1 style="font-size: 24px;">Reorder Report</h1>
     <p style="color: #B89080; font-size: 13px;">
         LLM-generated replenishment recommendations · Powered by Claude AI
     </p>
@@ -113,11 +113,11 @@ if report_type == "Single Location & Medication":
             st.metric("Days Remaining", f"{stock_info['days_remaining']} days")
 
         if stock_info['status'] == 'CRITICAL':
-            st.error("🚨 CRITICAL — Immediate replenishment required")
+            st.error("CRITICAL — Immediate replenishment required")
         elif stock_info['status'] == 'LOW':
-            st.warning("⚠️ LOW — Replenishment recommended within 24 hours")
+            st.warning("LOW — Replenishment recommended within 24 hours")
         else:
-            st.success("✅ OK — Stock level is adequate")
+            st.success("OK — Stock level is adequate")
 
     st.markdown("<br>", unsafe_allow_html=True)
 

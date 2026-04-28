@@ -7,7 +7,7 @@ from datetime import timedelta
 from anthropic import Anthropic
 from dotenv import load_dotenv
 
-st.set_page_config(page_title="Chatbot", page_icon="💬", layout="wide")
+st.set_page_config(page_title="CMedStock Assistant", page_icon="💬", layout="wide")
 
 # Load API key from .env
 load_dotenv(os.path.join(os.path.dirname(__file__), '..', '..', '.env'))
@@ -19,7 +19,7 @@ with open(css_path) as f:
 
 st.sidebar.markdown("""
 <div style="padding: 8px 0 20px 0; border-bottom: 0.5px solid #E8DDD5; margin-bottom: 8px;">
-    <div style="font-size: 18px; font-weight: 500; color: #8B5E52;">💊 MedStock AU</div>
+    <div style="font-size: 18px; font-weight: 500; color: #8B5E52;">MedStock AU</div>
     <div style="font-size: 11px; color: #B89080; margin-top: 2px;">Sydney Pharmacy Network</div>
 </div>
 """, unsafe_allow_html=True)
@@ -135,7 +135,7 @@ def get_data_context(message):
 # ── Page header ──────────────────────────────────────────────────
 st.markdown("""
 <div style="padding: 8px 0 16px 0;">
-    <h1 style="font-size: 24px;">💬 MedStock Assistant</h1>
+    <h1 style="font-size: 24px;">MedStock Assistant</h1>
     <p style="color: #B89080; font-size: 13px;">
         Ask me anything about Sydney pharmacy inventory, forecasts, and alerts
     </p>
@@ -148,10 +148,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 quick_questions = [
-    ("🚨 RPA Paracetamol stock?", "Does RPA Hospital have Paracetamol in stock?"),
-    ("⚠️ Any anomalies today?",   "Are there any anomaly alerts across all Sydney locations today?"),
-    ("📦 What to reorder?",       "Which medications are critically low and need urgent reordering?"),
-    ("📈 Amoxicillin forecast",   "What is the 7-day demand forecast for Amoxicillin at Westmead Hospital?"),
+    ("RPA Paracetamol stock?", "Does RPA Hospital have Paracetamol in stock?"),
+    ("Any anomalies today?",   "Are there any anomaly alerts across all Sydney locations today?"),
+    ("What to reorder?",       "Which medications are critically low and need urgent reordering?"),
+    ("Amoxicillin forecast",   "What is the 7-day demand forecast for Amoxicillin at Westmead Hospital?"),
 ]
 
 chip_cols = st.columns(4)
