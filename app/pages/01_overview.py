@@ -30,7 +30,7 @@ st.markdown("""
     <div style="font-size: 13px; color: #C4A090; margin-bottom: 4px;">
         AI-Powered Pharmaceutical Demand Forecasting & Inventory Optimisation
     </div>
-    <h1 style="font-size: 28px;"> Network Overview</h1>
+    <h1 style="font-size: 28px;">Sydney Pharmacy Network</h1>
     <p style="color: #B89080; font-size: 13px;">
         Sydney pharmacy network · 8 locations · 15 medications · Real-time AI monitoring
     </p>
